@@ -29,15 +29,17 @@ export default function StepExperience() {
             placeholder="Years"
             className="input"
           />
-          <button onClick={() => remove(index)} className="text-red-500 mt-2">
+          <button type="button" onClick={() => remove(index)} className="text-red-500 mt-2">
             Remove
           </button>
         </div>
       ))}
       <button
+        type="button"
         onClick={() => append({ company: "", role: "", years: 0 })}
         className="btn"
-      >
+        >   
+
         Add Experience
       </button>
     </div>

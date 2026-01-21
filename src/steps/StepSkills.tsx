@@ -26,14 +26,11 @@ export default function StepSkills() {
     <div className="flex flex-wrap gap-2">
       {SKILLS.map((skill) => (
         <button
-          key={skill}
-          onClick={() => toggle(skill)}
-          className={`px-3 py-1 rounded border ${
-            selected.includes(skill)
-              ? "bg-blue-500 text-white"
-              : "bg-gray-100"
-          }`}
-        >
+            type="button"
+                key={skill}
+                onClick={() => toggle(skill)}
+                    >
+
           {skill}
         </button>
       ))}

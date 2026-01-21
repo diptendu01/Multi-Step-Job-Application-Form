@@ -11,10 +11,11 @@ export const applicationSchema = z.object({
     name: z.string().min(2),
     email: z.string().email(),
     phone: z.string().min(8),
-    profile: z.string().url().optional(),
+    profile: z.string().url().optional().or(z.literal("")),
   }),
   experiences: z.array(experienceSchema).min(1),
   skills: z.array(z.string()).min(1),
 })
+
 
 export type ApplicationForm = z.infer<typeof applicationSchema>

@@ -64,13 +64,13 @@ export default function App() {
       setStep((s) => s + 1)
     } catch (err) {
       if (err instanceof z.ZodError) {
-        err.errors.forEach((e) => {
-          form.setError(e.path.join(".") as any, {
-            type: "manual",
-            message: e.message,
+        err.issues.forEach((issue) => {
+        form.setError(issue.path.join(".") as any, {
+        type: "manual",
+        message: issue.message,
           })
         })
-      }
+    }
     }
   }
 
