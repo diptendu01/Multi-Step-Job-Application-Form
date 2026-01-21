@@ -10,7 +10,7 @@ import StepExperience from "./steps/StepExperience"
 import StepSkills from "./steps/StepSkills"
 import StepReview from "./steps/StepReview"
 
-/* ---------------- STEP SCHEMAS ---------------- */
+
 
 const personalSchema = applicationSchema.pick({
   personal: true,
@@ -24,7 +24,7 @@ const skillsSchema = applicationSchema.pick({
   skills: true,
 })
 
-/* ------------------------------------------------ */
+
 
 const steps = ["Personal", "Experience", "Skills", "Review"]
 

@@ -15,7 +15,7 @@ export default function StepReview() {
   }
 
   if (success) {
-    return <p className="text-green-600">Application submitted 🎉</p>
+    return <p className="text-green-600">Application submitted successfully</p>
   }
 
   return (

@@ -11,7 +11,7 @@ const SKILLS = [
 
 export default function StepSkills() {
   const { watch, setValue } = useFormContext()
-  const selected = watch("skills")
+  const selected = watch("skills") ?? []
 
   const toggle = (skill: string) => {
     setValue(
